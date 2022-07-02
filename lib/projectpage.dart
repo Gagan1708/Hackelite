@@ -21,7 +21,7 @@ class _Project extends State<Project> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quiz Page'),
+        title: Text('Question 2'),
       ),
       body: Column(
         children: <Widget>[

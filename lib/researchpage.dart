@@ -1,6 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:quizpage/longtermresearch.dart';
+
+import 'shorttermresearch.dart';
 enum SingingCharacter {
   LongTerm,
   ShortTerm
@@ -20,7 +23,7 @@ class _Research extends State<Research> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quiz Page'),
+        title: Text('Question 2'),
       ),
       body:  Column(
         children: <Widget>[
@@ -70,10 +73,16 @@ class _Research extends State<Research> {
             child: Text('Submit'),
             onPressed: () {
               if (_character == SingingCharacter.LongTerm) {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LongResearch()),
+                );
               }
               else{
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ShortResearch()),
+                );
               }
             },
           ),

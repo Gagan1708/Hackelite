@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:quizpage/course_description.dart';
-class AppDev extends StatelessWidget {
-  static final String title = 'App Development';
+import 'course_machine.dart';
+class Machine extends StatelessWidget {
+  static final String title = 'Machine Learning';
 
   @override
   Widget build(BuildContext context) => MaterialApp(
@@ -13,11 +13,11 @@ class AppDev extends StatelessWidget {
 }
 
 
-class CardItem {
+class CardItem1{
   final String assetImage;
   final String title;
 
-  const CardItem({
+  const CardItem1({
     required this.assetImage,
     required this.title,
   });
@@ -29,60 +29,60 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  List<CardItem> paid = [
-    CardItem(
+  List<CardItem1> paid = [
+    CardItem1(
       assetImage: 'images/coursera.png',
       title: 'Coursera',
     ),
-    CardItem(
+    CardItem1(
       assetImage: 'images/simplilearn.jpg',
       title: 'Simplilearn',
     ),
-    CardItem(
+    CardItem1(
       assetImage: 'images/tutedude.jpg',
       title: 'TuteDude',
     ),
-    CardItem(
+    CardItem1(
       assetImage: 'images/udacity.png',
       title: 'Udacity',
     ),
-    CardItem(
+    CardItem1(
         title: 'Udemy',
         assetImage: 'images/udemy.png'
     ),
   ];
-  List<CardItem> free = [
-    CardItem(
+  List<CardItem1> free = [
+    CardItem1(
       assetImage: 'images/sololearn.jpg',
       title: 'SoloLearn',
     ),
-    CardItem(
+    CardItem1(
       assetImage: 'images/scrimba.jpg',
       title: 'Scrimba',
     ),
-    CardItem(
+    CardItem1(
       assetImage: 'images/greatlearning.jpg',
       title: 'GreatLearning',
     ),
   ];
-  List<CardItem> youtube = [
-    CardItem(
+  List<CardItem1> youtube = [
+    CardItem1(
       assetImage: 'images/coursera.png',
       title: 'Coursera',
     ),
-    CardItem(
+    CardItem1(
       assetImage: 'images/simplilearn.jpg',
       title: 'Simplilearn',
     ),
-    CardItem(
+    CardItem1(
       assetImage: 'images/tutedude.jpg',
       title: 'TuteDude',
     ),
-    CardItem(
+    CardItem1(
       assetImage: 'images/udacity.png',
       title: 'Udacity',
     ),
-    CardItem(
+    CardItem1(
         title: 'Udemy',
         assetImage: 'images/udemy.png'
     ),
@@ -92,7 +92,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      title: Text(AppDev.title),
+      title: Text(Machine.title),
       centerTitle: true,
     ),
     body: ListView(
@@ -162,7 +162,7 @@ class _MainPageState extends State<MainPage> {
   );
 
   Widget buildCard({
-    required CardItem item,
+    required CardItem1 item,
   }) =>
       Container(
         width: 200,
@@ -182,7 +182,7 @@ class _MainPageState extends State<MainPage> {
                           context,
                           MaterialPageRoute(
                             builder: (context) => CourseDescription(
-                              item: item,
+                              item1: item,
                             ),
                           ),
                         ),

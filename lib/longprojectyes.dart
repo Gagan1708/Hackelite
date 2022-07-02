@@ -1,15 +1,15 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:quizpage/appdevelopment.dart';
-class LongProjectNO extends StatefulWidget {
-  const LongProjectNO({Key? key}) : super(key: key);
+import 'package:quizpage/iot/iot.dart';
+class LongProjectYes extends StatefulWidget {
+  const LongProjectYes({Key? key}) : super(key: key);
 
   @override
-  State<LongProjectNO> createState() => _LongProjectNOState();
+  State<LongProjectYes> createState() => _LongProjectYesState();
 }
 
-class _LongProjectNOState extends State<LongProjectNO> {
+class _LongProjectYesState extends State<LongProjectYes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class _LongProjectNOState extends State<LongProjectNO> {
                 child: Column(
                   children: [
                     Text(
-                      'App Development is the perfect fit for you!',
+                      'IOT is the perfect fit for you!',
                       style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),
                     ),
                     SizedBox(height: 20,),
@@ -52,7 +52,7 @@ class _LongProjectNOState extends State<LongProjectNO> {
             onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>  AppDev()),
+                MaterialPageRoute(builder: (context) =>  IOT()),
               );
             },
           ),

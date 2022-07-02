@@ -1,6 +1,9 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:quizpage/shortprojectno.dart';
+
+import 'longprojectyes.dart';
 
 enum SingingCharacter { Yes, No }
 
@@ -18,7 +21,7 @@ class _ShortProject extends State<ShortProject> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quiz Page'),
+        title: Text('Question 3'),
       ),
       body: Column(
         children: <Widget>[
@@ -68,7 +71,16 @@ class _ShortProject extends State<ShortProject> {
             child: Text('Submit'),
             onPressed: () {
               if (_character == SingingCharacter.Yes) {
-              } else {}
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const LongProjectYes()),
+                );
+              } else {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  ShortProjectNO()),
+                );
+              }
             },
           ),
         ],

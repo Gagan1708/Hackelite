@@ -1,19 +1,21 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:quizpage/longprojectno.dart';
 import 'package:quizpage/longprojectyes.dart';
-import 'longprojectno.dart';
+import 'package:quizpage/longresearchno.dart';
+import 'package:quizpage/longresearchyes.dart';
 
 enum SingingCharacter { Yes, No }
 
-class LongProject extends StatefulWidget {
-  const LongProject({Key? key}) : super(key: key);
+class LongResearch extends StatefulWidget {
+  const LongResearch({Key? key}) : super(key: key);
 
   @override
-  State<LongProject> createState() => _LongProject();
+  State<LongResearch> createState() => _LongResearch();
 }
 
-class _LongProject extends State<LongProject> {
+class _LongResearch extends State<LongResearch> {
   SingingCharacter? _character = SingingCharacter.Yes;
 
   @override
@@ -72,12 +74,12 @@ class _LongProject extends State<LongProject> {
               if (_character == SingingCharacter.Yes) {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const LongProjectYes()),
+                  MaterialPageRoute(builder: (context) => const LongResearchYes()),
                 );
               } else {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const LongProjectNO()),
+                  MaterialPageRoute(builder: (context) => const LongResearchNO()),
                 );
               }
             },

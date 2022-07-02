@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:quizpage/appdevelopment.dart';
+import 'package:quizpage/web/webdevelopment.dart';
 class ShortProjectNO extends StatefulWidget {
   const ShortProjectNO({Key? key}) : super(key: key);
 
@@ -14,7 +14,7 @@ class _ShortProjectNOState extends State<ShortProjectNO> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quiz Page'),
+        title: Text('Result'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +52,7 @@ class _ShortProjectNOState extends State<ShortProjectNO> {
             onPressed: (){
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) =>  AppDev()),
+                MaterialPageRoute(builder: (context) =>  WebDev()),
               );
             },
           ),
